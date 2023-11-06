@@ -1,7 +1,7 @@
 [package]
 name = "corsp"
 version = "0.3.0"
-edition = "2023"
+edition = "2021"
 description = "A simple CORS proxy tool"
 repository = "https://github.com/gesemaya/corsp.git"
 readme = "README.md"
