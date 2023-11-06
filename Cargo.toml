@@ -1,0 +1,22 @@
+[package]
+name = "corsp"
+version = "0.3.0"
+edition = "2023"
+description = "A simple CORS proxy tool"
+repository = "https://github.com/gesemaya/corsp.git"
+readme = "README.md"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
+
+[dependencies]
+tokio = { version = "1.33.0", features = ["full"] }
+tower = { version = "0.4.13", features = ["util"] }
+tower-http = { version = "0.4.0", features = ["cors"] }
+hyper = { version = "0.14.25", features = ["http1", "http2", "client", "server", "tcp"] }
+hyper-rustls = { version = "0.23.2", features = ["http1", "http2", "native-tokio", "tls12"] }
+logs = { version = "0.7.1" }
+once_cell = { version = "1.17.1" }
+clap = { version = "4.2.1", features = ["derive"] }
